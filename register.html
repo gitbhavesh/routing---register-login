@@ -1,0 +1,64 @@
+<div ng-controller="registerCON">
+
+    <div ng-include="'header.html'"></div>
+
+    <div class="page-header">
+        <p class="text-center">Register from Here</p>
+    </div>
+
+    <form action="/" name="register" novalidate>
+        <div class="container takeIn">
+
+            <input class="form-control" type="text" name="name" ng-model="name" placeholder="Enter Name Here" ng-required="true" />
+            <p ng-show="register.name.$invalid && !register.name.$pristine" class="help-desk">Name is required</p>
+
+            <!--name="optradio"-->
+            <div class="radio-group">Gender:
+                <label class="radio-inline">
+                    <input type="radio" ng-model="gender" value="Male" />Male
+                </label>
+
+                <label class="radio-inline">
+                    <input type="radio" ng-model="gender" value="Female" />Female
+                </label>
+            </div>
+
+
+
+            <input class="form-control" name="email" ng-model="email" type="email" placeholder="Enter email Here" ng-required="true" />
+            <p ng-show="register.email.$invalid && !register.email.$pristine" class="help-desk">Enter Valid Id</p>
+
+            <input class="form-control" name="pass" ng-model="pass" type="password" placeholder="Enter Password Here" ng-minlength="4" ng-maxlength="8" ng-required="true" />
+            <p ng-show="register.pass.$error.minlength" class="help-block">Too Short</p>
+            <p ng-show="register.pass.$error.maxlength" class="help-block">Too Long</p>
+
+            <input class="form-control" name="cpass" ng-model="cpass" type="password" placeholder="Confirm Password Here" ng-minlength="4" ng-maxlength="8" ng-required="true" ng-pattern="pass"/>
+            <p ng-show="register.cpass.$error.pattern" class="help-block">Password Mismatch</p>
+
+
+            <input class="form-control" name="cont" ng-model="cont" placeholder="Enter contact Here" ng-minlength="7" ng-maxlength="10" ng-pattern="/^[0-9]*$/" />
+            <p ng-show="register.cont.$error.maxlength" class="help-desk">More than 10 digits not accepted</p>
+            <p ng-show="register.cont.$error.minlength" class="help-desk">Minimum 7 digits</p>
+            <p ng-show="register.cont.$invalid">Enter only Numbers</p>
+            <button type="button" class="btn btn-success" ng-click="save()" ng-disabled="register.$invalid">Submit</button>
+        </div>
+    </form>
+    <div class="container out">
+        <p class="text-center">Hello <b>{{name}}</b>, please confirm your following details</p>
+        <p>Your Name is : {{name}}</p>
+        <div ng-switch="gender">
+            <div ng-switch-when="Male">
+                <p>Your Gender is : Male</p>
+            </div>
+        </div>
+        <div ng-switch="gender">
+            <div ng-switch-when="Female">
+                <p>Your Gender is : Female</p>
+            </div>
+        </div>
+        <p>Your E-mail id is : {{email}}</p>
+        <p>Your Password is : {{pass}}</p>
+        <p>Your Contact Number is : {{cont}}</p>
+    </div>
+</div>
+</div>

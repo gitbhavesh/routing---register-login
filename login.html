@@ -1,0 +1,22 @@
+<div ng-controller="logi">
+
+    <div ng-include="'header.html'"></div>
+    <div class="container takeIn">
+        <div class="page-header">
+            <p class="text-center">Login from Here</p>
+        </div>
+
+        <form action="/" name="login" novalidate>
+                <input class="form-control" type="text" name="uname" ng-model="uname" placeholder="Username" ng-required="true" />
+                <p ng-show="login.uname.$invalid && !login.uname.$pristine" class="help-desk">Name  Required</p>
+
+            <input class="form-control" name="passw" ng-model="passw" type="password" placeholder="Enter Password Here" ng-required="true" />
+            <p ng-show="login.passw.$invalid && !login.passw.$pristine" class="help-block">Password Required</p>
+
+
+            <button type="button" class="btn btn-success" ng-click="save()" ng-disabled="login.$invalid">Login</button>
+
+        </form>
+        </div>
+
+</div>

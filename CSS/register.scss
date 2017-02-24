@@ -1,0 +1,58 @@
+$mainback: #dddddd;
+$fonttype: "Arial";
+
+body {
+    background-color: $mainback;
+    font-family: $fonttype;
+}
+
+.page-header {
+    p {
+        margin: 10px;
+        font-size: 28px;
+    }
+}
+
+.takeIn {
+    display: block;
+    width: 25vw;
+    padding: 20px;
+    .form-control,
+    .radio-group {
+        margin-top: 5px;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px grey;
+}
+
+.out {
+    @extend .takeIn;
+    margin-top: 5px;
+    font-family: $fonttype;
+    font-size: 18px;
+}
+.c1{
+    display: block;
+    margin-top: 30vh;
+    position: relative;
+    width: 50vw;
+    border-radius: 6px;
+    background-color: cornsilk;
+    box-shadow: 2px 2px grey;
+p{
+        font-size: 40px;
+    }
+
+}
+.navbar{
+    border-radius: 0px;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: firebrick;
+}

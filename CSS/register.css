@@ -1,0 +1,55 @@
+/* line 4, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+body {
+  background-color: #dddddd;
+  font-family: "Arial"; }
+
+/* line 10, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+.page-header p {
+  margin: 10px;
+  font-size: 28px; }
+
+/* line 16, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+.takeIn, .out {
+  display: block;
+  width: 25vw;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 2px 2px grey; }
+  /* line 20, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+  .takeIn .form-control, .out .form-control,
+  .takeIn .radio-group, .out .radio-group {
+    margin-top: 5px; }
+  /* line 24, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+  .takeIn .btn, .out .btn {
+    width: 100%;
+    margin-top: 5px; }
+
+/* line 33, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+.out {
+  margin-top: 5px;
+  font-family: "Arial";
+  font-size: 18px; }
+
+/* line 39, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+.c1 {
+  display: block;
+  margin-top: 30vh;
+  position: relative;
+  width: 50vw;
+  border-radius: 6px;
+  background-color: cornsilk;
+  box-shadow: 2px 2px grey; }
+  /* line 47, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+  .c1 p {
+    font-size: 40px; }
+
+/* line 52, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+.navbar {
+  border-radius: 0px; }
+
+/* line 56, E:/All_New_Stuff/Angular_Examples/demoApp-routing/CSS/register.scss */
+input.ng-touched.ng-invalid {
+  border-color: firebrick; }
+
+/*# sourceMappingURL=register.css.map */
